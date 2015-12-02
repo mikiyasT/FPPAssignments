@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Secretary extends DeptEmployee{
 
-	int overtimeHours;
+	int overtimeHours; 
 	
 	Secretary(String name, double salary, LocalDate hireDate) {
 		super(name, salary, hireDate);
