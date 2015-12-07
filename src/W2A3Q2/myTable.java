@@ -1,5 +1,7 @@
 package W2A3Q2;
 
+import java.util.Scanner;
+
 public class myTable {
 	
 	Entry[] entries = new Entry[26];
@@ -18,7 +20,7 @@ public class myTable {
 	}
 	
 	String get(char c){
-		String s = "";
+		String s = "Sorry, not avaialable";
 		for(int i = 0; i < cntr; i++){
 			if(entries[i].chr == c){
 				s = entries[i].str;
@@ -63,7 +65,16 @@ public class myTable {
 		
 		
 		System.out.println(tb);
+		System.out.println("Word indexed by 'c' is :");
 		System.out.println(tb.get('c'));
+		
+		Scanner in = new Scanner(System.in);
+		do{
+		System.out.println("Enter index [a,b,c,..]if you want to search a word ");
+		String input = in.nextLine();
+		System.out.println("Word indexed by '" + input.toString() + "' is -> "	+ tb.get(input.charAt(0)));
+		}while(true);
+		
 
 	}
 
