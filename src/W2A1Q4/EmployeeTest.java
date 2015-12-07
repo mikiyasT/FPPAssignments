@@ -21,7 +21,8 @@ public class EmployeeTest {
 		System.out.println("Displaying employee information from the emplyee database");
 		for(Employee e : emp){
 			e.getEmployeeDetails();
-			System.out.println("Please enter the number of years in service , and hours per month for the above employee : ");
+	
+			System.out.println("Please enter the number of years in service , \n and hours per month for the above employee [separated by space]  ");
 			
 			input = in.nextLine().split(" ");
 			e.setWorkInfo(Integer.parseInt(input[0]), Integer.parseInt(input[1]));

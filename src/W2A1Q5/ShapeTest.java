@@ -13,25 +13,42 @@ public class ShapeTest {
 			aShape.readShapeData();
 		}
 		
-		getShape();
+		getShapeInfo(shapes);
 
 	}
-	public static void getShape(){
-		System.out.println("Which shape instance do you want to display /n (C- circle , R - Rectangle, T - Triangle) ");
+	public static void getShapeInfo(Shape s[]){
+		System.out.println("Which shape instance do you want to display \n (C- circle , R - Rectangle, T - Triangle) ");
 		Scanner in = new Scanner(System.in);
 		String choice = in.nextLine();	
 		switch(choice.charAt(0)){
 		case 'C' :
-			System.out.println( new Circle().toString());
+			for(Shape aShape : s){
+				if(aShape instanceof Circle) {
+				System.out.println(aShape);
+				break;
+				}
+				
+			}
+			
 			break;
 		case 'R' :
-			System.out.println( new Rectangle().toString());
+			for(Shape aShape : s){
+				if(aShape instanceof Rectangle) {
+				System.out.println(aShape);
+				break;
+				}
+			}
 			break;
 		case 'T' :
-			System.out.println( new Triangle().toString());
+				for(Shape aShape : s){
+					if(aShape instanceof Triangle) {
+						System.out.println(aShape);
+						break;
+				}
+		}
 			break;
 		default:
-			System.out.println("Bad selection");
+			System.out.println("Wrong selection");
 				
 			
 		

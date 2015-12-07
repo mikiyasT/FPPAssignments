@@ -1,14 +1,16 @@
 package W2A1Q6;
 
 public class MainFrame extends Computer{
+	
 	int id;
 	String location;
-	@Override
-	double costProduct() {
-		// TODO Auto-generated method stub
-		return 20000;
+	
+	MainFrame(String manufacturer, String processor, int ramSize, int diskSize,double processorSpeed,int id,String location) {
+		super(manufacturer, processor, ramSize, diskSize, processorSpeed);
+		// TODO Auto-generated constructor stub
 	}
-	@Override
+	
+	
 	public boolean equals(Object o) {
 		if( o == null) return false;
 		if(!(o instanceof MainFrame)) return false;
@@ -17,6 +19,20 @@ public class MainFrame extends Computer{
 			return true;
 		else
 			return false;
+	}
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		MainFrame mf = (MainFrame)super.clone();
+		return mf;
+	}
+
+	@Override
+	public int hashCode() {
+		int code = 13;
+		code = (int)location.charAt(0) * code;
+		code = code * id + code;
+		return code;
 	}
 	
 }

@@ -6,10 +6,14 @@ public class Secretary extends DeptEmployee{
 
 	int overtimeHours; //contains how many hours a sec worked as overtime
 	
+	
 	Secretary(String name, double salary, LocalDate hireDate) {
 		super(name, salary, hireDate);
 		// TODO Auto-generated constructor stub
+		
 	}
+	
+
 	
 	public int getOvertimeHours() {
 		return overtimeHours;
