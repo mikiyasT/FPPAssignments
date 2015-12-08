@@ -16,7 +16,7 @@ public class StringUtility extends JFrame{
 	private JButton btn_revers;
 	private JButton btn_remove;
 	private JLabel lbl_input;
-	private JLabel lbl_output;
+	private JLabel lbl_output;//ouput
 	
 	
 	StringUtility(){
