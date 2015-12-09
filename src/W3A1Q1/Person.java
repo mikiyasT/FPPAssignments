@@ -15,8 +15,8 @@ class Person
 	}
 	public void displayPerson() // Display fisrtName, lastName and age
 	{
-		System.out.println("First name : " + firstName + "Last name : "
-				+ lastName + "age : " + age);
+		System.out.println(" First name : " + firstName + " Last name : "
+				+ lastName + " age : " + age);
  	}
 	public String getLastName() // get only the last name
 	{

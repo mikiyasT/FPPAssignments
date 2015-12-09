@@ -58,6 +58,7 @@ class PersonArrayOp
 		for(int i = index; i < this.nElems - 1 ; i++){
 			a[i] = a[i+1];
 		}
+		a[this.nElems - 1] = null;
 		this.nElems--;
 		
 		return found;
@@ -65,6 +66,7 @@ class PersonArrayOp
 	public void displayAll() // displays array contents
 	{
 		for(Person p : this.a)
+			if(p != null)
 			p.displayPerson();
 	}
 	public int size() // Return the number of persons stored in the array
