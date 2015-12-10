@@ -45,8 +45,16 @@ public class MyStringLinkedList {// need to check the implemented methods.
 	// implement the code
 	public void postAddNode(Node n, String value){
 		
-		Node newNode = new Node(n,value,n.next);
-		n.next.previous = newNode;
+		Node newNode;
+		if(n.next != null){
+			newNode = new Node(n,value,n.next);	
+			n.next.previous = newNode;
+		}
+		
+		else{
+			newNode = new Node(n,value,null);
+		}	
+		
 		n.next = newNode;
 		this.size++;
 					
