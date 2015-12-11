@@ -21,25 +21,33 @@ public class MyPriorityQueue {// need to check the implemented methods.
 			Node n = new Node(null,item,null);
 			header = n;
 		}
-		else{
-			Node temp = header;
-			
+		else
+		{
+			Node temp = header;			
 			boolean nodeInserted = false;
-			while(temp.next != null){
-				
-				switch(temp.value.compareTo(item)){
-				case 1:
-					temp = temp.next;
-					break;
-				case 0:
-				case -1:
-					Node newNode= new Node(temp,item,null);
-					temp.next = newNode;
-					nodeInserted = true;
+			while(temp != null){				
+				if(temp.value.compareTo(item) >= 0){
+					Node newNode= new Node(temp.previous,item,temp);
+					if(temp.previous != null){
+						temp.previous.next = newNode;
+						temp.previous = newNode;
+					}
+					else{
+						temp.previous = newNode;
+						header = newNode;			
+					}
+								
 					break;
 				}
-				if(nodeInserted)
+				else if(temp.next == null){
+					Node newNode= new Node(temp,item,null);
+					temp.next = newNode;					
 					break;
+				}
+				else{
+					temp = temp.next;
+				}
+						
 			}		
 			
 		}
@@ -48,7 +56,10 @@ public class MyPriorityQueue {// need to check the implemented methods.
 	}
 
 
-	
+	public void peek(){
+		if(header != null)
+			System.out.println(header);
+	}
 // implement the code
 
        public int Size(){
@@ -100,14 +111,13 @@ public class MyPriorityQueue {// need to check the implemented methods.
 
 	
 	public void remove(){
-		Node temp = header;
 		
-		while(temp.next != null){
-			temp = temp.next;
+		if(header != null){
+			Node temp = header;
+			header = header.next;
+			header.previous = null;
+			temp.next = null;
 		}
-		Node beforeLast = temp.previous;
-		beforeLast.next = null;
-		temp.previous = null;
 		
 	}
 
@@ -145,12 +155,24 @@ public class MyPriorityQueue {// need to check the implemented methods.
 		MyPriorityQueue mypq = new MyPriorityQueue();
 		
 		mypq.add("miki");
-		mypq.add("yared");
-		mypq.add("abebe");
-		mypq.add("zeleke");
-		
-		
 		System.out.println(mypq);
+		mypq.add("yared");
+		System.out.println(mypq);
+		mypq.add("abebe");
+		System.out.println(mypq);
+		mypq.add("zeleke");
+		System.out.println(mypq);
+		mypq.add("tesfaye");
+		System.out.println(mypq);
+		mypq.add("bekele");
+		System.out.println(mypq);
+		mypq.add("chala");
+		System.out.println(mypq);
+		mypq.add("worke");		
+		System.out.println(mypq);
+		mypq.remove();
+		System.out.println(mypq);
+		mypq.peek();
 		
 		
 	}
