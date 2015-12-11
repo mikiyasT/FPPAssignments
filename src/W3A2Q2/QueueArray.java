@@ -3,7 +3,7 @@ package W3A2Q2;
 public class QueueArray {
 	Object[] a;
 	int size;
-	int capacity = 4;
+	int capacity = 4;// can be any number
 	
 	QueueArray(){
 		a = new Object[capacity];
