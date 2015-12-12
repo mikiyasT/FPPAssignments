@@ -7,7 +7,7 @@ package W3A4Q2;
 
 import java.io.*;
 import java.util.Scanner;
-////////////////////////////////////////////////////////////////
+
 class DataItem
 {                                // (could have more data)
 	private String mail_id;               // data item (key)

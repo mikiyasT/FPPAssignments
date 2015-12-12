@@ -18,13 +18,9 @@ public class Course {
 	public void setC_name(String c_name) {
 		this.c_name = c_name;
 	}
-
-
 	public String[] getFaculty() {
 		return faculty;
 	}
-
-
 	public void setFaculty(String[] faculty) {
 		this.faculty = faculty;
 	}
