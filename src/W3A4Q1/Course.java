@@ -5,10 +5,10 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 
-public class Course {
+public class Course { 
 	
-	private String c_name;
-	private String[] faculty;
+	private String c_name; 
+	private String[] faculty;  
 	
 	public String getC_name() {
 		return c_name;
