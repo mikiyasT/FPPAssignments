@@ -185,7 +185,7 @@ public class MyBST {
 		System.out.println("Searching for 19 " + mybst.contains(19));
 		System.out.println("Searching for 55 " + mybst.contains(55));
 		System.out.println("Size of tree " + mybst.size());
-		System.out.println("Number of leaf nodes " + mybst.leafNodes(mybst.root));
+		System.out.println("Number of leaf nodes " + mybst.leafNodes(mybst.root));  
 		
 			
 	}
